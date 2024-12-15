@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>MIREATeX</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="stylesheet" href="./static/styles.css" />
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script type="module" src="./static/script.js"></script>
+  </head>
+  <body>
+    <main>
+      <h1>LaTeX анализатор Soft.Tech</h1>
+      
+      <div class="editor-container">
+        <div class="editor-results-wrapper">
+          <div class="editor-section">
+            <div class="input-section">
+              <textarea id="latex-input" placeholder="Введите LaTeX выражение..."></textarea>
+              <div class="preview-section">
+                <h3>Выражение:</h3>
+                <div id="preview">$$$$</div>
+              </div>
+              <button id="search-button" class="search-button">Поиск</button>
+            </div>
+            
+            <div class="math-keyboard">
+              <div class="keyboard-row">
+                <button data-latex="\sqrt{}" data-cursor-offset="6">√</button>
+                <button data-latex="\sqrt[]{}" data-cursor-offset="6">∛</button>
+                <button data-latex="\int_{}^{}{}" data-cursor-offset="6">∫</button>
+                <button data-latex="\sum_{}^{}{}" data-cursor-offset="6">∑</button>
+                <button data-latex="\frac{}{}" data-cursor-offset="6">⅍</button>
+              </div>
+              <div class="keyboard-row">
+                <button data-latex="\alpha">α</button>
+                <button data-latex="\beta">β</button>
+                <button data-latex="\pi">π</button>
+                <button data-latex="\infty">∞</button>
+                <button data-latex="\Delta ">Δ</button>
+              </div>
+              <div class="keyboard-row">
+                <button data-latex="\div">÷</button>
+                <button data-latex="\times">×</button>
+                <button data-latex="\neq">≠</button>
+                <button data-latex="_{}" data-cursor-offset="2">nₓ</button>
+                <button data-latex="^{}" data-cursor-offset="2">nⁿ</button>
+              </div>
+              <div class="keyboard-row">
+                <button data-latex="\leq">≤</button>
+                <button data-latex="\geq">≥</button>
+                <button data-latex="\equiv">≡</button>
+                <button data-latex="{}" data-cursor-offset="1">{}</button>
+                <button data-latex="()" data-cursor-offset="1">()</button>
+              </div>
+            </div>
+          </div>
+          
+          <div class="results-section">
+            <h3>Результаты поиска:</h3>
+            <div id="search-results"></div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>
